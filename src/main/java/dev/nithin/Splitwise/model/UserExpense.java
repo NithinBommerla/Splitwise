@@ -1,4 +1,4 @@
-package model;
+package dev.nithin.Splitwise.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -6,7 +6,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
-import model.constant.UserExpenseType;
+import dev.nithin.Splitwise.model.constant.UserExpenseType;
 
 @Getter
 @Setter

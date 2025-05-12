@@ -1,8 +1,7 @@
-package model;
+package dev.nithin.Splitwise.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package model;
+package dev.nithin.Splitwise.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -12,15 +12,15 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class BaseModel {
+public abstract class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(value = TemporalType.TIMESTAMP)
     private LocalDateTime createdAt;
     @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(value = TemporalType.TIMESTAMP)
     private LocalDateTime updatedAt;
 
 }

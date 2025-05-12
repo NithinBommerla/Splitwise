@@ -1,4 +1,4 @@
-package model;
+package dev.nithin.Splitwise.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
@@ -21,3 +21,14 @@ public class User extends BaseModel {
     private List<Group> groups;
 
 }
+
+/*
+{
+    "username" : "",
+    "email" : "",
+    "password" : "",
+    "firstName" : "",
+    "lastName" : "",
+    "phone" : ""
+}
+ */
