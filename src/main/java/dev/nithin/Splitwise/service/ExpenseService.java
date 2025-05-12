@@ -2,6 +2,7 @@ package dev.nithin.Splitwise.service;
 
 import dev.nithin.Splitwise.DTO.ExpenseCreateRequestDTO;
 import dev.nithin.Splitwise.DTO.UserExpenseCreateRequestDTO;
+import dev.nithin.Splitwise.exception.GroupNotFoundException;
 import dev.nithin.Splitwise.model.Expense;
 import dev.nithin.Splitwise.model.UserExpense;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class ExpenseService {
     @Autowired
     private GroupService groupService;
 
-    public Expense createExpense(ExpenseCreateRequestDTO requestDTO, int groupId) {
+    public Expense createExpense(ExpenseCreateRequestDTO requestDTO, int groupId) throws GroupNotFoundException {
         Expense expense = new Expense();
         expense.setAmount(requestDTO.getAmount());
         expense.setDescription(requestDTO.getDescription());

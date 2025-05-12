@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import dev.nithin.Splitwise.repository.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
@@ -15,9 +17,13 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User findByID(Integer userID) {
-        return userRepository.findById(userID).orElseThrow(
-                () -> new UserNotFoundException("User not found with id: "+userID)
+    public User findByID(Integer userId) throws UserNotFoundException {
+        return userRepository.findById(userId).orElseThrow(
+                () -> new UserNotFoundException("User not found with id: "+userId)
         );
+    }
+
+    public List<User> findAll() {
+        return userRepository.findAll();
     }
 }

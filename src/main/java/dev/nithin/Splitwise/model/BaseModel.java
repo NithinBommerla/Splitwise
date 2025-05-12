@@ -22,5 +22,4 @@ public abstract class BaseModel {
     @LastModifiedDate
     @Temporal(value = TemporalType.TIMESTAMP)
     private LocalDateTime updatedAt;
-
 }
